@@ -106,7 +106,7 @@ const checkwin = () => {
               <div className="box"  onClick={(e)=>{toggle(e,8)}}></div>
             </div>
       </div>
-      <button className="reset" onClick={reset}>Make it Reset</button>
+      <button className="reset" onClick={reset}>Reset100</button>
     </div>
   )
 }
