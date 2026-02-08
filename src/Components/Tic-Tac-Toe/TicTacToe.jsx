@@ -10,9 +10,7 @@ let [count,setcount] = useState(0);
 let [lock,setlock] = useState(false);
 let titleref = useRef(null);
 const toggle = (e, num) => {
-  if (lock) return; // If the game is over, do nothing
-
-  // Check if the clicked cell is already filled
+  if (lock) return; 
   if (data[num] !== "") return;
 
   if (count % 2 === 0) {
@@ -59,6 +57,14 @@ const toggle = (e, num) => {
   [2,4,6]  
 ];
 
+const highlightWinningCells = (a, b, c) => {
+  const boxes = document.querySelectorAll('.box');
+  boxes[a].style.backgroundColor = 'lightgreen';
+  boxes[b].style.backgroundColor = 'lightgreen';
+  boxes[c].style.backgroundColor = 'lightgreen';
+};
+
+
 const checkwin = () => {
   for (let [a, b, c] of winPatterns) {
     if (data[a] && data[a] === data[b] && data[b] === data[c]) {
@@ -66,9 +72,18 @@ const checkwin = () => {
       return true;  
     }
   }
+
+  
+  if (!data.includes("")) {
+    setTimeout(() => { 
+      alert("It's a Draw! Resetting the board...");
+      reset(); 
+    }, 300);
+    return false;
+  }
+
   return false; 
 };
-
 
   const won = (winner)=>{
     setlock(true);
