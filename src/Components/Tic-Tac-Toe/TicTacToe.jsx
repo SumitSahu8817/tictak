@@ -9,23 +9,24 @@ const TicTacToe = () => {
 let [count,setcount] = useState(0); 
 let [lock,setlock] = useState(false);
 let titleref = useRef(null);
-const toggle = (e,num)=>{
-if(lock){
-  return 0;
-}
-if(count%2===0){
- e.target.innerHTML = `<img src="${cross_icon}" />`;
+const toggle = (e, num) => {
+  if (lock) return; // If the game is over, do nothing
 
-  data[num]="x";
-  setcount(count+1);
-}else{
+  // Check if the clicked cell is already filled
+  if (data[num] !== "") return;
+
+  if (count % 2 === 0) {
+    e.target.innerHTML = `<img src="${cross_icon}" />`;
+    data[num] = "x";
+  } else {
     e.target.innerHTML = `<img src="${circle_icon}" />`;
+    data[num] = "o";
+  }
 
-  data[num]="o";
-  setcount(count+1);
+  setcount(count + 1);
+  checkwin();
 }
-checkwin();
-}
+
 
   // const checkwin = ()=>{
   //   if(data[0]===data[1]&&data[1]===data[2]&&data[2]!=""){
