@@ -3,7 +3,7 @@
 }
 .font{
     font: italic;
-    color:darkgrey;
+    color: oklch(from color l c h);
 }
 .title{
     margin-top: 50px;
