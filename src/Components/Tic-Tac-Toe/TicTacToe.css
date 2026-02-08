@@ -34,8 +34,8 @@
     display:flex
  } */
   .board{
- height: 500px;
- width: 400px;
+ height: 600px;
+ width: 564px;
  display: flex;
  margin: auto;
  
