@@ -1,6 +1,10 @@
 .container{
     text-align: center;
 }
+.font{
+    font: italic;
+    color:darkgrey;
+}
 .title{
     margin-top: 50px;
     color:black;

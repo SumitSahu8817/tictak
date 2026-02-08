@@ -88,6 +88,7 @@ const checkwin = () => {
 }
   return (
     <div className='container'>
+      <h3 className='font'>Sumit Sahu</h3>
       <h1 className="title" ref={titleref}>Tic-Tac-Toe Game In<span>React</span></h1>
       <div className="board">
             <div className="row1">
