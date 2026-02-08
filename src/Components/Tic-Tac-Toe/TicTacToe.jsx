@@ -57,12 +57,7 @@ const toggle = (e, num) => {
   [2,4,6]  
 ];
 
-const highlightWinningCells = (a, b, c) => {
-  const boxes = document.querySelectorAll('.box');
-  boxes[a].style.backgroundColor = 'lightgreen';
-  boxes[b].style.backgroundColor = 'lightgreen';
-  boxes[c].style.backgroundColor = 'lightgreen';
-};
+
 
 
 const checkwin = () => {
