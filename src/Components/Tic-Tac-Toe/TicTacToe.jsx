@@ -71,7 +71,8 @@ const checkwin = () => {
   
   if (!data.includes("")) {
     setTimeout(() => { 
-      alert("It's a Draw! Resetting the board...");
+      // alert("It's a Draw! Resetting the board...");
+      <h2>It's a Draw! Resetting the board...</h2>
       reset(); 
     }, 300);
     return false;
